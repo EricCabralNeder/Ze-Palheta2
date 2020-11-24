@@ -15,3 +15,9 @@ Novo cliente
     Então devo ver a notificação:   Cliente cadastrado com sucesso!
 
 
+Campos Obrigatórios
+    [Tags]      temp
+    Dado que acesso o formulário de cadasrto de clientes
+    Quando faço a inclusão de clientes:
+    ...     ${EMPTY}        ${EMPTY}        ${EMPTY}        ${EMPTY}
+    Então devo ver mensagens informando que os campos do cadastro de clientes são obrigatórios
