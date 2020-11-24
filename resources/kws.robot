@@ -43,8 +43,13 @@ Então devo ver a notificação:
 
 
 Então devo ver mensagens informando que os campos do cadastro de clientes são obrigatórios
-    Wait Until Page Contains        Nome é obrigatório      5
-    Wait Until Page Contains        CPF é obrigatório
-    Wait Until Page Contains        Endereço é obrigatório
-    Wait Until Page Contains        Telefone é obrigatório
+    Wait Until Page Contains        Nome é obrigatório          5
+    Wait Until Page Contains        CPF é obrigatório           5
+    Wait Until Page Contains        Endereço é obrigatório      5
+    Wait Until Page Contains        Telefone é obrigatório      5
     
+
+Então devo ver o texto:
+    [Arguments]                     ${expect_text}    
+
+    Wait Until Page Contains        ${expect_text}              5
